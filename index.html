@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Reloj </title>
+</head>
+<body>
+    <script>
+        function ver_hora(){
+            var mihora = new date();
+            var hora = mihora.getHours().toString();
+            var minutos = mihora.getMinutes().toString();
+            if (minutos.lenght == 1) minutos = "0" + minutos;
+            var segundo = mihora.getSeconds().toString();
+            if (segundos.lenght == 1) segundo = "0" + segundos;
+            documents.forms[0].mireloj.value = horas + ":" + minutos + " " + segundos;
+        }
+    </script>
+
+    <form>
+        <palign = "center">
+            <input type="text" name="mireloj" id="mireloj" size="10">
+            <p></p>
+    </form>
+    <script>
+        var r = setInterval("ver_hora()", 500)
+    </script>
+</body>
+</html>
